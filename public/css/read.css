@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.table-container {
+    background-color: white;
+    border-radius: 0.6vw;
+    padding: 1.5vw;
+    box-shadow: 0 2vw 1vw rgba(0, 0, 0, 0.1);
+    width: 100vh;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.table-bordered {
+    border-radius: 10vw;
+    text-align: center; 
+}
+
+.table-bordered th,
+.table-bordered td {
+    vertical-align: middle;
+}

@@ -1,0 +1,41 @@
+{{!-- CSS Import --}}
+<link rel="stylesheet" href="/css/read.css">
+{{!-- End CSS Import --}}   
+
+<div class="container">
+    <div class="table-container">
+        <h2 class="text-center mb-4">Lista de Alunos</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Nome do Aluno</th>
+                        <th>Responsável</th>
+                        <th>Data de Nascimento</th>
+                        <th>Ano Escolar</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {{#each alunos}}
+                    <tr>
+                        <td>{{this.nome}}</td>
+                        <td>{{this.responsavel}}</td>
+                        <td>{{formatarData this.data_Nasc}}</td>
+                        <td>{{this.ano_Escolar}}</td>
+                        <td>
+                            <a href="/editar/{{this.id}}" class="btn btn-sm btn-warning mr-2" title="Editar"><ion-icon name="create-outline"></ion-icon></a>
+                            <a href="/excluir/{{this.id}}" class="btn btn-sm btn-danger" title="Excluir"><ion-icon name="trash-outline"></ion-icon></a>
+                        </td>
+                    </tr>
+                {{/each}}
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.0.1/ionicons.min.js"></script>

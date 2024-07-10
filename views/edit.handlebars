@@ -1,0 +1,32 @@
+{{!-- CSS Import --}}
+<link rel="stylesheet" href="/css/create.css">
+{{!-- End CSS Import --}}   
+
+<div class="register_container">
+    <div class="half left">
+        <img src="https://lunarmimi.net/wp-content/uploads/2024/02/AAH-008-Plan-Art-Goals-04.webp" alt="Placeholder Image">
+        <p>Edite os dados do aluno!</p>
+    </div>
+    <div class="half right">
+        <div class="register_form">
+            <form id="register_form" method="POST" action="/atualizar">
+
+                <input type="hidden" id="kid_id" name="kid_id" value="{{aluno.id}}">
+
+                <label for="kid_name">Nome do Aluno:</label>
+                <input type="text" id="kid_name" name="kid_name" required value="{{aluno.nome}}">
+                
+                <label for="responsible_person">Responsável:</label>
+                <input type="text" id="responsible_person" name="responsible_person" required value="{{aluno.responsavel}}">
+                
+                <label for="kid_birthday">Data de Nascimento:</label>
+                <input type="date" id="kid_birthday" name="kid_birthday" required value="{{aluno.data_Nasc}}">
+                
+                <label for="kid_school_year">Ano Escolar:</label>
+                <input type="text" id="kid_school_year" name="kid_school_year" required value="{{aluno.ano_Escolar}}">
+                
+                <button type="submit">Editar</button>
+            </form>
+        </div>
+    </div>
+</div>
